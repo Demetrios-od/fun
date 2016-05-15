@@ -1,3 +1,4 @@
+% plot a 3D graph
 x=[0:0.05:1];
 y=[0:0.05:1];
 for i=1:length(x)
