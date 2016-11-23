@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+</head>
+
+<body>
+<h2>Home task</h2>
+<ol>
+  <li>Learn the theoretical positions (key position), using  methodical recommendations, lecture notes and recommended literature.</li>
+  <li>Prepare answers for key questions (questions for admission to the laboratory work).</li>
+  <li>Prepare a report layout.</li>
+  <li>Solve the problem (the result of solving the problem relates to the original data to perform laboratory work).</li>
+  <li>Learn the description of the algorithm and software structure of the layout.</li>
+</ol>
+
+<h2>Initial data</h2>
+<p>Initial data is here.</p>
+
+<h2>Methodical instructions</h2>
+<p>Spectral density of noise power, calculated at the input of receiver, can be calculated by the next formula:</p>
+<p> <i>N</i><sub>0</sub> = <i>k</i>(<i>k<sub>n</sub></i>-1)<i>T</i><sub>0</sub>, W/Hz</p>
+
+<p>where <i>k</i> = 1,38&middot;10 <sup>-23</sup> W/(Hz &middot; K) - Botzman constant;<br>
+  <i>k<sub>n</sub></i> – receiver noise coefficient in relative units;<br>
+  <i>T</i><sub>0</sub> – receiver temperature in Kelvin degrees. Receiver temperature is given.
+</p>
+
+<p>Transition from relative to logarithmic units and back is carried out by the formulas:</p>
+<p> <i>k</i>,dB = 10 lg <i>k</i>;</p>
+<p> <i>k</i> = 10<sup><i>k</i>,dB / 10</sup>.</p>
+
+<p>To calculate the noise power at the receiver's input of the mobile station, the next expression can be used:</p>
+<p> <i>P<sub>n</sub></i> = <i>N</i><sub>0</sub> &#916; <i>F<sub>rec</sub></i>, W</p>
+
+<p>where <i>N</i><sub>0</sub> - spectral density of noise power,<br>
+  &#916; <i>F<sub>rec</sub></i> – receiver frequency bandwidth. Value <i>N</i><sub>0</sub> should be substituted in W/Hz, frequency bandwidth &#916; <i>F<sub>rec</sub></i> in hertz.</p>
+
+<h2>Results</h2>
+<p>Please enter your initial data and results of homework.</p>
+<form>
+  <table id="tblEnteringResults">
+    <tr>
+      <td>Bandwidth, MHz</td>
+      <td><input id="ipFreqBand" type="text" value="0.2" /></td>
+    </tr>
+    <tr>
+      <td>Noise factor, dB</td>
+      <td><input id="ipNoiseFactor" type="text" value="8" /></td>
+    </tr>
+    <tr>
+      <td>Receiver's temperature, K</td>
+      <td><input id="ipTempRec" type="text" value="290" /></td>
+    </tr>
+    <tr>
+      <td>Spectral power density of noise, W/Hz</td>
+      <td><input id="ipSND" type="text" value="2.125e-20" /></td>
+    </tr>
+    <tr>
+      <td>Noise power level at the receiver's input, dBm</td>
+      <td><input id="ipRecNoisePower" type="text" value="-113.7" /></td>
+    </tr>
+    <tr>
+      <td>&#160;</td>
+      <td>
+        <button id="btnCheckHometask" type="button">Check result</button>
+        <button id="btnClearHometask" type="reset">Clear</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+</body>
+</html>

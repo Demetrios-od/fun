@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8"></meta>
+  <title></title>
+</head>
+
+<body>
+<h2>Laboratory work</h2>
+<p>Consider a generalized scheme of a GSM transceiver.</p>
+<img id="imgScheme" src="" width="900" height="412" />
+<br><br><br>
+
+<div id="dTabsHeader">
+  <ul class="tabNavigation">
+    <li><a id="liTask" href="#dTaskTab">Laboratory task</a></li>
+    <li><a id="liModeling" href="#dModelingTab">Modeling</a></li>
+    <li><a id="liHelp" href="#dHelpTab">Help</a></li>
+  </ul>
+</div>
+
+<div id="dTabs">
+  <div id="dTaskTab" class="tabBody">
+    <p>Laboratory task will be here.</p>
+    <div class="breaker"></div>
+  </div>
+
+  <div id="dModelingTab" class="tabBody">
+    <div id="dParamsMainList">
+      <div class="dParamsMainListHeader">Frequency synthesizer in transmitter</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbFreqToModulator" class="tdParamName">To modulator, MHz</td>
+            <td class="tdParamValue">
+              <input id="ipFreqToModulator" class="intableEditBox" type="text" name="ipFreqToModulator" value="12" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbFreqToFC1Tx" class="tdParamName">To 1st FC in transceiver, MHz</td>
+            <td class="tdParamValue">
+              <input id="ipFreqToFC1Tx" class="intableEditBox" type="text" name="ipFreqToFC1Tx" value="88" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbFreqToFC2Tx" class="tdParamName">To 2nd FC in transceiver, MHz</td>
+            <td class="tdParamValue">
+              <input id="ipFreqToFC2Tx" class="intableEditBox" type="text" name="ipFreqToFC2Tx" value="850" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dParamsMainListHeader">Bit source</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbSourceState" class="tdParamName">State</td>
+            <td class="tdParamValue">
+              <select id="selSourceState" class="intableDropdownBox">
+                <option value="swon" selected>On</option>
+                <option value="swoff">Off</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbNumberOfBits" class="tdParamName">Number of bits</td>
+            <td class="tdParamValue">
+              <input id="ipNumberOfBits" class="intableEditBox" type="text" name="ipNumberOfBits" value="30" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbSampleFreq" class="tdParamName">Sampling frequency, MHz</td>
+            <td class="tdParamValue">
+              <input id="ipSampleFreq" class="intableEditBox" type="text" name="ipSampleFreq" value="2" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dParamsMainListHeader">Power amplifier</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbPAGain" class="tdParamName">Gain, dB</td>
+            <td class="tdParamValue">
+              <input id="ipPAGain" class="intableEditBox" type="text" name="ipPAGain" value="45" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dParamsMainListHeader">Transmitting antenna</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbTXGain" class="tdParamName">Gain, dB</td>
+            <td class="tdParamValue">
+              <input id="ipTXGain" class="intableEditBox" type="text" name="ipTXGain" value="12" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dParamsMainListHeader">Propagation medium</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbDistance" class="tdParamName">Distance, km</td>
+            <td class="tdParamValue">
+              <input id="ipDistance" class="intableEditBox" type="text" name="ipDistance" value="2" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbPropFactor" class="tdParamName">Attenuation factor, dB/decade</td>
+            <td class="tdParamValue">
+              <input id="ipPropFactor" class="intableEditBox" type="text" name="ipPropFactor" value="40" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbSND" class="tdParamName">SND in the radio channel, W/Hz</td>
+            <td class="tdParamValue">
+              <input id="ipSND" class="intableEditBox" type="text" name="ipSND" value="3e-16" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dParamsMainListHeader">Receiving antenna</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbRXGain" class="tdParamName">Gain, dB</td>
+            <td class="tdParamValue">
+              <input id="ipRXGain" class="intableEditBox" type="text" name="ipRXGain" value="0" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dParamsMainListHeader">Low noise amplifier</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbLNAGain" class="tdParamName">Gain, dB</td>
+            <td class="tdParamValue">
+              <input id="ipLNAGain" class="intableEditBox" type="text" name="ipLNAGain" value="10" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbLNANoiseFactor" class="tdParamName">Noise factor, dB</td>
+            <td class="tdParamValue">
+              <input id="ipLNANoiseFactor" class="intableEditBox" type="text" name="ipLNANoiseFactor" value="5" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbLNATemperature" class="tdParamName">Temperature, C</td>
+            <td class="tdParamValue">
+              <input id="ipLNATemperature" class="intableEditBox" type="text" name="ipLNATemperature" value="20" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dParamsMainListHeader">Frequency synthesizer in receiver</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbFreqToFC1Rx" class="tdParamName">To 1st FC in receiver, MHz</td>
+            <td class="tdParamValue">
+              <input id="ipFreqToFC1Rx" class="intableEditBox" type="text" name="ipFreqToFC1Rx" value="879" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbFreqToFC2Rx" class="tdParamName">To 2nd FC in receiver, MHz</td>
+            <td class="tdParamValue">
+              <input id="ipFreqToFC2Rx" class="intableEditBox" type="text" name="ipFreqToFC2Rx" value="56" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbFreqToDemodulator" class="tdParamName">To demodulator, MHz</td>
+            <td class="tdParamValue">
+              <input id="ipFreqToDemodulator" class="intableEditBox" type="text" name="ipFreqToDemodulator" value="15" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbFreqToSolvingDevice" class="tdParamName">To solving device, MHz</td>
+            <td class="tdParamValue">
+              <input id="ipFreqToSolvingDevice" class="intableEditBox" type="text" name="ipFreqToSolvingDevice" value="0.270833" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dParamsMainListHeader">Intermediate frequency amplifier</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbIFAGain" class="tdParamName">Gain, dB</td>
+            <td class="tdParamValue">
+              <input id="ipIFAGain" class="intableEditBox" type="text" name="ipIFAGain" value="40" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbIFANoiseFactor" class="tdParamName">Noise factor, dB</td>
+            <td class="tdParamValue">
+              <input id="ipIFANoiseFactor" class="intableEditBox" type="text" name="ipIFANoiseFactor" value="20" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbIFBandwidth" class="tdParamName">Bandwidth, MHz</td>
+            <td class="tdParamValue">
+              <input id="ipIFBandwidth" class="intableEditBox" type="text" name="ipIFBandwidth" value="0.2" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Demodulator and Solving Device -->
+
+    </div>
+
+    <div id="dButtonCalculate">
+      <button id="btnCalculate">Calculate scheme</button>
+    </div>
+
+    <div id="dSignals" class="resultArea">
+      <p>&nbsp;&nbsp;&nbsp;Point&nbsp;
+      <select id="selSignalToShow">
+        <option value="BitSource" selected>1: Input of the Gaussian Filter</option>
+        <option value="GaussFilter">2: Output of the Gaussian Filter</option>
+        <option value="Modulator">3: Output of the Modulator</option>
+        <option value="TConvertor1">4: Output of the 1st Frequency Convertor (Tx)</option>
+        <option value="TConvertor2">5: Output of the 2nd Frequency Convertor (Tx)</option>
+        <option value="PowerAmplifier">6: Output of the Transmitter</option>
+        <option value="RadioLink">7: Input of the Receiver</option>
+        <option value="LNA">8: Output of the LNA</option>
+        <option value="RConvertor1">9: Output of the 1st Frequency Convertor (Rx)</option>
+        <option value="RConvertor2">10: Input of the Demodulator</option>
+        <option value="Demodulator">11: Output of the Demodulator</option>
+        <option value="SolvingDevice">12: Output of the Solving Device</option>
+      </select>
+      <!-- <button id="btnShowSignal">Show</button> -->
+      </p>
+      <div id="dGraph"></div>
+    </div>
+
+    <div class="breaker"></div>
+  </div>
+
+  <div id="dHelpTab" class="tabBody">
+    <p>Here will be instructions how to enter the input data.</p>
+    <div class="breaker"></div>
+  </div>
+</div>
+
+</body>
+</html>
