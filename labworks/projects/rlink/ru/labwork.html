@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8"></meta>
+  <title></title>
+  <script src="script/flot/jquery.flot.min.js"></script>
+  <script src="script/page-labwork.js"></script>
+</head>
+
+<body>
+<h2>Лабораторная работа</h2>
+<p>Рассмотрим обобщённую схему радиолинии.</p>
+<img id="imgScheme" src="img/rlink_ru.gif" width="900" height="266" />
+<br><br><br>
+
+<div id="dTabsHeader">
+  <ul class="tabNavigation">
+    <li><a id="liTask" href="#dTaskTab">Лабораторное задание</a></li>
+    <li><a id="liModeling" href="#dModelingTab">Моделирование</a></li>
+    <li><a id="liHelp" href="#dHelpTab">Помощь</a></li>
+  </ul>
+</div>
+
+<div id="dTabs">
+  <div id="dTaskTab" class="tabBody">
+    <p>Здесь будет лабораторное задание.</p>
+    <div class="breaker"></div>
+  </div>
+
+  <div id="dModelingTab" class="tabBody">
+    <div id="dParamsMainList">
+      <div class="dParamsMainListHeader">Общие параметры</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbCalcMode" class="tdParamName">Режим расчёта</td>
+            <td class="tdParamValue">
+              <select id="selCalcMode" class="intableDropdownBox">
+                <option value="distance" selected>Расстояние</option>
+                <option value="loss">Потери</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dParamsMainListHeader">Передающая радиостанция</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbPower" class="tdParamName">Уровень мощности, дБм</td>
+            <td class="tdParamValue">
+              <input id="ipPower" class="intableEditBox" type="text" name="ipPower" value="-10" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbFrequency" class="tdParamName">Рабочая частота, МГц</td>
+            <td class="tdParamValue">
+              <input id="ipFrequency" class="intableEditBox" type="text" name="ipFrequency" value="950" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbTxFeederLoss" class="tdParamName">Потери в фидере, дБ</td>
+            <td class="tdParamValue">
+              <input id="ipTxFeederLoss" class="intableEditBox" type="text" name="ipTxFeederLoss" value="2" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbTxAntennaGain" class="tdParamName">Коэффициент усиления антенны, дБ</td>
+            <td class="tdParamValue">
+              <input id="ipTxAntennaGain" class="intableEditBox" type="text" name="ipTxAntennaGain" value="12" />
+            </td>
+          </tr>
+
+          <!-- suitable parameters -->
+          <tr id="trTxAntennaHeight">
+            <td id="lbTxAntennaHeight" class="tdParamName">Высота антенны, м</td>
+            <td class="tdParamValue">
+              <input id="ipTxAntennaHeight" class="intableEditBox" type="text" name="ipTxAntennaHeight" value="10" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dParamsMainListHeader">Среда распространения радиоволн</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbPropModel" class="tdParamName">Модель распространения</td>
+            <td class="tdParamValue">
+              <select id="selPropModel" class="intableDropdownBox">
+                <option value="freespace" selected>Свободное пространство</option>
+                <!--
+                <option value="doubleway">Двухлучевая</option>
+                <option value="ohata">Окамуры-Хата</option>
+                -->
+              </select>
+            </td>
+          </tr>
+
+          <!-- suitable parameters -->
+          <tr id="trDistance">
+            <td id="lbDistance" class="tdParamName">Расстояние, км</td>
+            <td class="tdParamValue">
+              <input id="ipDistance" class="intableEditBox" type="text" name="ipDistance" value="1" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dParamsMainListHeader">Приёмная радиостанция</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbSensitivity" class="tdParamName">Чувствительность, дБм</td>
+            <td class="tdParamValue">
+              <input id="ipSensitivity" class="intableEditBox" type="text" name="ipSensitivity" value="-107" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbRxFeederLoss" class="tdParamName">Потери в фидере, дБ</td>
+            <td class="tdParamValue">
+              <input id="ipRxFeederLoss" class="intableEditBox" type="text" name="ipRxFeederLoss" value="1" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbRxAntennaGain" class="tdParamName">Коэффициент усиления антенны, дБ</td>
+            <td class="tdParamValue">
+              <input id="ipRxAntennaGain" class="intableEditBox" type="text" name="ipRxAntennaGain" value="0" />
+            </td>
+          </tr>
+
+          <!-- suitable parameters -->
+          <tr id="trRxAntennaHeight">
+            <td id="lbRxAntennaHeight" class="tdParamName">Высота антенны, м</td>
+            <td class="tdParamValue">
+              <input id="ipRxAntennaHeight" class="intableEditBox" type="text" name="ipRxAntennaHeight" value="1.5" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+    <div id="dButtonCalculate">
+      <button id="btnCalculate">Рассчитать</button>
+    </div>
+
+    <div id="dResultsDist" class="resultArea">
+      <p>Дальность связи: <span id="lbMaxDistance">0</span> км</p>
+    </div>
+
+    <div id="dResultsLoss" class="resultArea">
+      <p>Уровень мощности на входе приёмника: <span id="lbInputPower">0</span> дБм</p>
+      <p>Потери при распространении: <span id="lbPropLoss">0</span> дБ</p>
+      <p>Сигнал <span id="lbNot"></span> может быть принят с заданным качеством.</p>
+    </div>
+
+    <div class="breaker"></div>
+  </div>
+
+  <div id="dHelpTab" class="tabBody">
+    <p>Здесь будут инструкции, как вводить исходные данные.</p>
+    <div class="breaker"></div>
+  </div>
+</div>
+
+</body>
+</html>
