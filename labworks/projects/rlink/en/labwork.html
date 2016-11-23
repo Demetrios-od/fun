@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8"></meta>
+  <title></title>
+  <script src="script/flot/jquery.flot.min.js"></script>
+  <script src="script/page-labwork.js"></script>
+</head>
+
+<body>
+<h2>Laboratory work</h2>
+<p>Consider a generalized scheme of a radio link.</p>
+<img id="imgScheme" src="img/rlink_en.gif" width="900" height="266" />
+<br><br><br>
+
+<div id="dTabsHeader">
+  <ul class="tabNavigation">
+    <li><a id="liTask" href="#dTaskTab">Laboratory task</a></li>
+    <li><a id="liModeling" href="#dModelingTab">Modeling</a></li>
+    <li><a id="liHelp" href="#dHelpTab">Help</a></li>
+  </ul>
+</div>
+
+<div id="dTabs">
+  <div id="dTaskTab" class="tabBody">
+    <p>Laboratory task will be here.</p>
+    <div class="breaker"></div>
+  </div>
+
+  <div id="dModelingTab" class="tabBody">
+    <div id="dParamsMainList">
+      <div class="dParamsMainListHeader">Common parameters</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbCalcMode" class="tdParamName">Calculating mode</td>
+            <td class="tdParamValue">
+              <select id="selCalcMode" class="intableDropdownBox">
+                <option value="distance" selected>Distance</option>
+                <option value="loss">Loss</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dParamsMainListHeader">Transmitting radio station</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbPower" class="tdParamName">Power level, dBm</td>
+            <td class="tdParamValue">
+              <input id="ipPower" class="intableEditBox" type="text" name="ipPower" value="-10" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbFrequency" class="tdParamName">Operating frequency, MHz</td>
+            <td class="tdParamValue">
+              <input id="ipFrequency" class="intableEditBox" type="text" name="ipFrequency" value="950" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbTxFeederLoss" class="tdParamName">Feeder loss, dB</td>
+            <td class="tdParamValue">
+              <input id="ipTxFeederLoss" class="intableEditBox" type="text" name="ipTxFeederLoss" value="2" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbTxAntennaGain" class="tdParamName">Antenna gain, dB</td>
+            <td class="tdParamValue">
+              <input id="ipTxAntennaGain" class="intableEditBox" type="text" name="ipTxAntennaGain" value="12" />
+            </td>
+          </tr>
+
+          <!-- suitable parameters -->
+          <tr id="trTxAntennaHeight">
+            <td id="lbTxAntennaHeight" class="tdParamName">Antenna height, m</td>
+            <td class="tdParamValue">
+              <input id="ipTxAntennaHeight" class="intableEditBox" type="text" name="ipTxAntennaHeight" value="10" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dParamsMainListHeader">Propagation medium</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbPropModel" class="tdParamName">Propagation model</td>
+            <td class="tdParamValue">
+              <select id="selPropModel" class="intableDropdownBox">
+                <option value="freespace" selected>Free space</option>
+                <!--
+                <option value="doubleway">Double-way</option>
+                <option value="ohata">Okumura-Hata</option>
+                -->
+              </select>
+            </td>
+          </tr>
+
+          <!-- suitable parameters -->
+          <tr id="trDistance">
+            <td id="lbDistance" class="tdParamName">Distance, km</td>
+            <td class="tdParamValue">
+              <input id="ipDistance" class="intableEditBox" type="text" name="ipDistance" value="1" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dParamsMainListHeader">Receiving radio station</div>
+      <div class="dParamsMainListContent">
+        <table>
+          <tr>
+            <td id="lbSensitivity" class="tdParamName">Sensitivity, dBm</td>
+            <td class="tdParamValue">
+              <input id="ipSensitivity" class="intableEditBox" type="text" name="ipSensitivity" value="-107" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbRxFeederLoss" class="tdParamName">Feeder loss, dB</td>
+            <td class="tdParamValue">
+              <input id="ipRxFeederLoss" class="intableEditBox" type="text" name="ipRxFeederLoss" value="1" />
+            </td>
+          </tr>
+          <tr>
+            <td id="lbRxAntennaGain" class="tdParamName">Antenna gain, dB</td>
+            <td class="tdParamValue">
+              <input id="ipRxAntennaGain" class="intableEditBox" type="text" name="ipRxAntennaGain" value="0" />
+            </td>
+          </tr>
+
+          <!-- suitable parameters -->
+          <tr id="trRxAntennaHeight">
+            <td id="lbRxAntennaHeight" class="tdParamName">Antenna height, m</td>
+            <td class="tdParamValue">
+              <input id="ipRxAntennaHeight" class="intableEditBox" type="text" name="ipRxAntennaHeight" value="1.5" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+    <div id="dButtonCalculate">
+      <button id="btnCalculate">Calculate</button>
+    </div>
+
+    <div id="dResultsDist" class="resultArea">
+      <p>Communication distance: <span id="lbMaxDistance">0</span> km</p>
+    </div>
+
+    <div id="dResultsLoss" class="resultArea">
+      <p>Power level at the input of receiver: <span id="lbInputPower">0</span> dBm</p>
+      <p>Propagation loss: <span id="lbPropLoss">0</span> dB</p>
+      <p>The signal could <span id="lbNot"></span> be received with the necessary quality.</p>
+    </div>
+
+    <div class="breaker"></div>
+  </div>
+
+  <div id="dHelpTab" class="tabBody">
+    <p>Here will be instructions how to enter the input data.</p>
+    <div class="breaker"></div>
+  </div>
+</div>
+
+</body>
+</html>
