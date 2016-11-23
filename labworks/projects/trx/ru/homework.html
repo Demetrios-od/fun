@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+</head>
+
+<body>
+<h2>Домашнее задание</h2>
+<ol>
+  <li>Изучите теоретические положения (ключевые положения), используя методическое руководство, конспект лекций и рекомендуемую литературу.</li>
+</ol>
+
+<h2>Исходные данные</h2>
+<p>Здесь будут исходные данные.</p>
+
+<h2>Методические указания</h2>
+<p>Спектральная плотность мощности шума...</p>
+
+<h2>Результаты</h2>
+<p>Введите ваши исходные данные и результаты выполнения домашнего задания.</p>
+<form>
+  <table id="tblEnteringResults">
+    <tr>
+      <td>Полоса частот, МГц</td>
+      <td><input id="ipFreqBand" type="text" value="0.2" /></td>
+    </tr>
+    <tr>
+      <td>Коэффициент шума, дБ</td>
+      <td><input id="ipNoiseFactor" type="text" value="8" /></td>
+    </tr>
+    <tr>
+      <td>Температура приёмника, К</td>
+      <td><input id="ipTempRec" type="text" value="290" /></td>
+    </tr>
+    <tr>
+      <td>Спектральная плотность мощности шума, Вт/Гц</td>
+      <td><input id="ipSND" type="text" value="2.125e-20" /></td>
+    </tr>
+    <tr>
+      <td>Уровень мощности шума на входе приёмника, дБм</td>
+      <td><input id="ipRecNoisePower" type="text" value="-113.7" /></td>
+    </tr>
+    <tr>
+      <td>&#160;</td>
+      <td>
+        <button id="btnCheckHometask" type="button">Проверить результат</button>
+        <button id="btnClearHometask" type="reset">Очистить</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+</body>
+</html>
