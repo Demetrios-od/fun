@@ -1,0 +1,340 @@
+body, button, input, select {
+  font-size: 11pt;
+  }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #666;
+  }
+h1 {
+  text-align: center;
+  }
+button {
+  width: 200px;
+  }
+div.breaker {
+  clear: both;
+  padding: 0;
+  }
+input {
+  width: 200px;
+  }
+input.intableEditBox {
+  border: 0;
+  width: 100px;
+  height: 20px;
+  background-color: #ddd;
+  font-size: 10pt;
+  }
+input.intableEditBoxChanged {
+  background-color: #eaa;
+  }
+select.intableDropdownBox {
+  border: 0;
+  width: 100px;
+  height: 20px;
+  background-color: #ddd;
+  font-size: 10pt;
+  }
+
+#dContainer {
+  position: relative;
+  margin: 0 auto;
+  width: 1000px;
+  border: 2px solid #aaa;
+  background-color: #fff;
+  }
+
+  #imgOnatLogo {
+    float: left;
+    }
+  #dHeader {
+      background-color: #88f;
+      height: 145px;
+      border-bottom: 2px solid #5A60DB;
+      }
+    #dGlobalMenu {
+      height: 35px;
+      padding-left: 80px;
+      padding-top: 15px;
+      }
+      .tmItem {
+        display: inline;
+       }
+      .tmItem span {
+        padding: 10px 20px;
+        background-color: #9ebae4;
+        border-radius: 5px;
+        }
+      .tmblock {
+        display: none;
+        padding: 0;
+        background-color: #feffc4;
+        position: absolute;
+        z-index: 5;
+        border-radius: 4px;
+        margin-top: 10px;
+        margin-bottom: 0;
+        cursor: pointer;
+        }
+      .tmblock li {
+        display: block;
+        padding: 10px 20px;
+        border: 1px solid #feffc4;
+        border-radius: 4px;
+        }
+      .tmblock li:hover {
+        background-color: #eff0ad;
+        border: 1px solid #e9b590;
+        }
+    #ulMenu {
+      margin: 0;
+      padding-left: 50px;
+      }
+    #ulMenu li {
+      display: block;
+      float: left;
+      width: 28%;
+      height: 30px;
+      padding-top: 10px;
+      text-align: center;
+      margin: 5px 12px;
+      border: 3px #dad;
+      border-radius: 12px;
+      }
+    #ulMenu li.upped {
+      border-style: outset;
+      background-color: #ccc;
+      cursor: pointer;
+      }
+    #ulMenu li.pressed {
+      border-style: inset;
+      background-color: #aaa;
+      cursor: pointer;
+      }
+    #ulMenu li.act {
+      border-style: inset;
+      background-color: #aca;
+      cursor: default;
+      }
+    #lbTitle {
+      margin: 0;
+      padding: 0;
+      border-top: 2px solid #A7ACFF;
+      }
+
+    #dLang {
+      height: 30px;
+      position: absolute;
+      top: 5px;
+      right: 15px;
+    }
+    #ulLang {
+      margin: 0;
+    }
+    #ulLang li {
+      display: block;
+      float: left;
+      text-align: center;
+      border: 1px solid #aca8ec;
+      padding: 0 5px;
+      background-color: #feffd9;
+      color: #000;
+    }
+    #ulLang li.upped {
+      border-style: outset;
+      background-color: #77b4b7;
+      cursor: pointer;
+    }
+    #ulLang li.pressed {
+      border-style: inset;
+      background-color: #70d3d8;
+      cursor: pointer;
+    }
+    #ulLang li.act {
+      border-style: inset;
+      background-color: #fbab51;
+      cursor: default;
+    }
+
+
+  #dContent {
+    padding: 20px;
+    }
+    ul.tabNavigation {
+      list-style: none;
+      margin: 0;
+      padding-left: 20px;
+      }
+    ul.tabNavigation li {
+      display: inline;
+      }
+    ul.tabNavigation li a {
+      padding: 3px 15px;
+      background-color: #C1575C;
+      color: #000;
+      text-decoration: none;
+      border-radius: 10px 10px 0 0;
+      }
+    ul.tabNavigation li a.selected,
+    ul.tabNavigation li a:hover {
+      background-color: #5F7DC8;
+      color: #fff;
+      padding-top: 7px;
+      }
+    ul.tabNavigation li a:focus {
+      outline: 0;
+      }
+
+    #dTabs {
+      width: 100%;
+      text-align: left;
+      }
+      .tabBody {
+        position: relative;
+        padding: 20px;
+        margin-top: 3px;
+        border: 3px solid #5F7DC8;
+        height: 410px;
+        color: #000;
+        }
+        #dGraph {
+          position: absolute;
+          width: 572px;
+          height: 333px;
+          bottom: 3px;
+          left: 3px;
+          background-color: #f3fa89;
+          border: 1px solid #888;
+          }
+      #dParamsMainList {
+        width: 310px;
+        height: 370px;
+        float: left;
+        font-size: 10pt;
+        border: 1px solid #966;
+        overflow-y: scroll;
+        }
+        .dParamsMainListHeader {
+          background-color: #bbb;
+          cursor: pointer;
+          }
+        .dParamsMainListContent {
+          background-color: #eef;
+          cursor: default;
+          }
+        .tdParamName {
+          width: 200px;
+          }
+        .tdParamValue {
+          width: 100px;
+          }
+      #dButtonCalculate {
+        position: absolute;
+        bottom: 15pt;
+        left: 64px;
+        width: 150pt;
+        height: 25px;
+        }
+      .resultArea {
+        position: relative;
+        float: right;
+        width: 560px;
+        height: 380px;
+        border: 1px solid #966;
+        padding: 10px;
+        }
+
+  #dFooter {
+    background-color: #448;
+    font-family: Georgia, Times, serif;
+    font-size: 8pt;
+    color: #fff;
+    height: 40px;
+    }
+    #dfLeft {
+      width: 600px;
+      text-align: left;
+      float: left;
+      padding-top: 13px;
+      padding-left: 20px;
+      }
+    #dfRight {
+      text-align: right;
+      padding-top: 13px;
+      padding-right: 20px;
+      }
+      .flink {
+        color: #99f;
+        }
+      .flink:visited {
+        color: #99f;
+        }
+
+#dPopup {
+  position: fixed;
+  background-color: #fff;
+  border: 2px #339 solid;
+  padding: 15px;
+  z-index: 20;
+  }
+  #dPopupPageMenu {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    }
+  #dPopupPageMenu img {
+    cursor: pointer;
+    }
+  .innerParamsHead {
+    background-color: #ccc;
+    cursor: pointer;
+    border: 1px #339 solid;
+    height: 30px;
+    }
+  .innerParamsBody {
+    display: none;
+    border: 1px #339 solid;
+    }
+  .devDescription {
+    top: 30px;
+    width: 700px;
+    height: 400px;
+    overflow-y: scroll;
+    }
+  .waitmessage {
+    top: 100px;
+    width: 500px;
+    height: 50px;
+    }
+
+#dBlocker {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(32, 32, 32, 0.5);
+  z-index: 10;
+  }
+
+#dProgressBarWrapper {
+  height: 100%;
+  width: 100%;
+  border: 1px #000 solid;
+  background-color: #ccc;
+  }
+#dProgressBar {
+  height: 100%;
+  width: 30%;
+  border: 1px #000 solid;
+  background-color: #44f;
+  }
+
+.test1 {border: 1px solid #f00;}
+.test2 {border: 1px solid #0f0;}
+.test3 {border: 1px solid #00f;}
+.test4 {border: 1px solid #f0f;}
+.test5 {border: 1px solid #ff0;}
+.test6 {border: 1px solid #0ff;}
