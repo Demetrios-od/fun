@@ -1,0 +1,43 @@
+var TRg = {
+  langPrefix: 'en',
+  incorrectHometask: 'Incorrect! Please check your result.\nYou are not allowed to perform this work until you don\'t solve the hometask.',
+  correctHometask: 'Hometask is solved properly.',
+  processingScheme: 'Processing scheme. This may take a long time. Please wait...',
+  devInBitStream: 'Input: Bit stream',
+  devGaussFilter: 'Gaussian filter',
+  devModulator: 'Modulator',
+  devFC1Tx: 'Frequency convertor 1',
+  devFC2Tx: 'Frequency convertor 2',
+  devPowerAmp: 'Power amplifier',
+  devBandpassFilter: 'Bandpass filter',
+  devAntennaTx: 'Transmitting antenna',
+  devNoise: 'Noise',
+  devPropMedium: 'Propagation medium',
+  devAntennaRx: 'Receiving antenna',
+  devPreselector: 'Preselector',
+  devLNA: 'Low noise amplifier',
+  devFC1Rx: 'Frequency convertor 1',
+  devIFA: 'IFA',
+  devFC2Rx: 'Frequency convertor 2',
+  devDemodulator: 'Demodulator',
+  devSolvingDevice: 'Solving device',
+  devOutBitStream: 'Output: Digital stream',
+  devFSTx: 'Frequency synthesizer (Tx)',
+  devTransmitter: 'Transmitter',
+  devFeederTx: 'Transmitting feeder',
+  devFeederRx: 'Receiving feeder',
+  devReceiver: 'Receiver',
+  lbNot: 'not'
+};
+
+var TRid = {
+  lbChooseLabWork: 'Choose the laboratory work',
+  lbLabworkTRx: 'Researching a GSM Transceiver',
+  lbLabworkRlink: 'Researching a radio link',
+  liStatements: 'Key Statements',
+  liQuestions: 'Key Questions',
+  liWork: 'Doing Work',
+  dfLeft: '&#169; 2014-2015 A.S.Popov ONAT',
+  lbDevelopment: 'Development: ',
+  lbDeveloper: 'Bukhan D.'
+};

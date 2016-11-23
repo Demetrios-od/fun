@@ -1,0 +1,43 @@
+var TRg = {
+  langPrefix: 'ru',
+  incorrectHometask: 'Неверно! Проверьте ваш результат.\nВы не допущены к выполнению этой работы,\nпока не выполните домашнее задание.',
+  correctHometask: 'Домашнее задание решено правильно.',
+  processingScheme: 'Работа схемы. Это может занять много времени. Пожалуйста подождите...',
+  devInBitStream: 'Вход: поток бит',
+  devGaussFilter: 'Гауссовский фильтр',
+  devModulator: 'Модулятор',
+  devFC1Tx: '1-й преобразователь частоты (Пер)',
+  devFC2Tx: '2-й преобразователь частоты (Пер)',
+  devPowerAmp: 'Усилитель мощности',
+  devBandpassFilter: 'Полосовой фильтр',
+  devAntennaTx: 'Передающая антенна',
+  devNoise: 'Шум',
+  devPropMedium: 'Среда распространения радиоволн',
+  devAntennaRx: 'Приёмная антенна',
+  devPreselector: 'Преселектор',
+  devLNA: 'Малошумящий усилитель',
+  devFC1Rx: '1-й преобразователь частоты (Пр)',
+  devIFA: 'УПЧ',
+  devFC2Rx: '2-й преобразователь частоты (Пр)',
+  devDemodulator: 'Демодулятор',
+  devSolvingDevice: 'Решающее устройство',
+  devOutBitStream: 'Выход: цифровой поток',
+  devFSTx: 'Синтезатор частоты (Пер)',
+  devTransmitter: 'Передатчик',
+  devFeederTx: 'Фидер передатчика',
+  devFeederRx: 'Фидер приёмника',
+  devReceiver: 'Приёмник',
+  lbNot: 'не'
+};
+
+var TRid = {
+  lbChooseLabWork: 'Выберите лабораторную работу',
+  lbLabworkTRx: 'Исследование приёмопередатчика GSM',
+  lbLabworkRlink: 'Исследование радиоканала',
+  liStatements: 'Ключевые положения',
+  liQuestions: 'Ключевые вопросы',
+  liWork: 'Выполнение работы',
+  dfLeft: '&#169; 2014-2015 ОНАС им. А.С. Попова',
+  lbDevelopment: 'Разработка: ',
+  lbDeveloper: 'Бухан Д.Ю.'
+};

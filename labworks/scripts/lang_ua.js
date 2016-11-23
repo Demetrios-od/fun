@@ -1,0 +1,43 @@
+var TRg = {
+  langPrefix: 'ua',
+  incorrectHometask: 'Невірно! Перевірте ваш результат.\nВи не допущені до виконання цієї роботи,\nдоки не виконаєте домашнє завдання.',
+  correctHometask: 'Домашнє завдання розв\'язано правильно.',
+  processingScheme: 'Робота схеми. Це може зайняти багато часу. Будь ласка, зачекайте...',
+  devInBitStream: 'Вхід: потік біт',
+  devGaussFilter: 'Гаусівський фільтр',
+  devModulator: 'Модулятор',
+  devFC1Tx: '1-й перетворювач частоти (Пер)',
+  devFC2Tx: '2-й перетворювач частоти (Пер)',
+  devPowerAmp: 'Підсилювач потужності',
+  devBandpassFilter: 'Смуговий фільтр',
+  devAntennaTx: 'Передавальна антена',
+  devNoise: 'Шум',
+  devPropMedium: 'Середовище розповсюдження радіохвиль',
+  devAntennaRx: 'Приймальна антена',
+  devPreselector: 'Преселектор',
+  devLNA: 'Малошумлячий підсилювач',
+  devFC1Rx: '1-й перетворювач частоти (Пр)',
+  devIFA: 'ППЧ',
+  devFC2Rx: '2-й перетворювач частоти (Пр)',
+  devDemodulator: 'Демодулятор',
+  devSolvingDevice: 'Вирішуючий пристрій',
+  devOutBitStream: 'Вихід: цифровий потік',
+  devFSTx: 'Синтезатор частоти (Пер)',
+  devTransmitter: 'Передавач',
+  devFeederTx: 'Фідер передавача',
+  devFeederRx: 'Фідер приймача',
+  devReceiver: 'Приймач',
+  lbNot: 'не'
+};
+
+var TRid = {
+  lbChooseLabWork: 'Оберіть лабораторну роботу',
+  lbLabworkTRx: 'Дослідження прийомопередавача GSM',
+  lbLabworkRlink: 'Дослідження радіоканала',
+  liStatements: 'Ключові положення',
+  liQuestions: 'Ключові питання',
+  liWork: 'Виконання роботи',
+  dfLeft: '&#169; 2014-2015 ОНАЗ ім. О.С. Попова',
+  lbDevelopment: 'Розробка: ',
+  lbDeveloper: 'Бухан Д.Ю.'
+};
