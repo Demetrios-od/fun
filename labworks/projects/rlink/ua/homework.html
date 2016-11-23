@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8"></meta>
+  <title></title>
+  <script src="script/page-homework.js"></script>
+</head>
+
+<body>
+<h2>Домашнє завдання</h2>
+<ol>
+  <li>Вивчіть теоретичні положення (ключові положення), використовуючи методичні вказівки, конспект лекційта рекомендовану літературу.</li>
+</ol>
+
+<h2>Вихідні дані</h2>
+<p>Тут будуть вихідні дані.</p>
+
+<h2>Методичні вказівки</h2>
+<p>Тут будуть методичні вказівки до виконання домашнього завдання.</p>
+
+<h2>Результати</h2>
+<p>Введіть ваші вихідні дані й отримані максимальні відстані.</p>
+<form>
+  <table id="tblEnteringResults">
+    <tr>
+      <td>Коефіцієнт підсилення передавальної антени, дБ</td>
+      <td><input id="ipAntennaTxGain" type="text" value="16.2" /></td>
+    </tr>
+    <tr>
+      <td>Коефіцієнт підсилення приймальної антени, дБ</td>
+      <td><input id="ipAntennaRxGain" type="text" value="4.8" /></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">Дальність зв’язку, км</td>
+    </tr>
+    <tr>
+      <td>При рівні потужності -10 дБм</td>
+      <td><input id="ipDistm10" type="text" value="19.9" /></td>
+    </tr>
+    <tr>
+      <td>При рівні потужності -5 дБм</td>
+      <td><input id="ipDistm5" type="text" value="35.4" /></td>
+    </tr>
+    <tr>
+      <td>При рівні потужності 0 дБм</td>
+      <td><input id="ipDist0" type="text" value="62.9" /></td>
+    </tr>
+    <tr>
+      <td>При рівні потужності 5 дБм</td>
+      <td><input id="ipDist5" type="text" value="111.9" /></td>
+    </tr>
+    <tr>
+      <td>При рівні потужності 10 дБм</td>
+      <td><input id="ipDist10" type="text" value="199" /></td>
+    </tr>
+    <tr>
+      <td>&#160;</td>
+      <td>
+        <button id="btnCheckHometask" type="button">Перевірити результат</button>
+        <button id="btnClearHometask" type="reset">Очистити</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+</body>
+</html>
